@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>交运集团</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="banner">
+            <ul class="banner-list">
+                <li class="banner-list-1 list"></li>
+                <li class="banner-list-2 list"></li>
+                <li class="banner-list-3 list"></li>
+            </ul>
+            <ul class="banner-btn">
+                <li class="btn banner-btn-1"></li>
+                <li class="btn banner-btn-2"></li>
+                <li class="btn banner-btn-3"></li>
+            </ul>
+
+        </div>
+        <div class="dis"><img src="./images/2.png" alt="tuangou"></div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-list-1">畅游长江</li>
+                <li class="nav-list-2">最美宜昌</li>
+                <li class="nav-list-3">最炫三峡</li>
+            </ul>
+            <div class="xq">
+                <div class="xq-img"><img src="./images/3.png" alt="xq-img"></div>
+                <div class="xq-txt">
+                    <div class="xq-txt-title">畅游长江三峡 大美三峡华夏神女号游轮国内豪华邮轮旅游</div>
+                    <div class="xq-txt-v">
+                        ·多地出发动车往返三峡航线上线<br>
+                        ·游轮价格可能会随着船方价格调整而波动，降价不退差价，涨价也不加价<br>
+                        ·华夏神女一号: 每周四发班; 华夏神女二号; 每周日发班<br>
+                    </div>
+                    <div class="xq-txt-price">
+                        ￥1,599
+                        <a class="less" href="javascript:;">/人</a>
+                        <a class="less-br" href="javascript:;">￥1700</a>
+                    </div>
+                </div>
+                <div class="xq-btn"><a href="./list1.html">查看详情</a></div>
+            </div>
+            <div class="xq">
+                <div class="xq-img"><img src="./images/3.png" alt="xq-img"></div>
+                <div class="xq-txt">
+                    <div class="xq-txt-title">畅游长江三峡 大美三峡华夏神女号游轮国内豪华邮轮旅游</div>
+                    <div class="xq-txt-v">
+                        ·多地出发动车往返三峡航线上线<br>
+                        ·游轮价格可能会随着船方价格调整而波动，降价不退差价，涨价也不加价<br>
+                        ·华夏神女一号: 每周四发班; 华夏神女二号; 每周日发班<br>
+                    </div>
+                    <div class="xq-txt-price">
+                        ￥1,599
+                        <a class="less" href="javascript:;">/人</a>
+                        <a class="less-br" href="javascript:;">￥1700</a>
+                    </div>
+                </div>
+                <div class="xq-btn"><a href="./list1.html">查看详情</a></div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot-left foot-chil">首页</div>
+            <div class="foot-right foot-chil">我的</div>
+        </div>
+    </div>
+    <script>
+        // 轮播图
+        (() => {
+            let ban_li = document.getElementsByClassName('banner-list')[0]
+            let lis = document.getElementsByClassName('btn')
+            let index = 0
+            lis[index].style.backgroundColor = 'gray'
+            // 点击切换
+            for (let i = 0; i < lis.length; i++) {
+                lis[i].onclick = function () {
+                    index = i
+                    ban_li.style.left = -800 * index + 'px'
+                    setBtn()
+                }
+            }
+
+            // 自动切换
+            let setIn = setInterval(() => {
+                ban_li.style.left = -800 * index + 'px'
+                setBtn()
+                index++ && index <= 3
+                if (index === 3) {
+                    index = 0
+                }
+            }, 3000)
+            
+
+            // banner-btn样式
+            function setBtn() {
+                for (let i = 0; i < lis.length; i++) {
+                    lis[i].style.backgroundColor = ''
+                }
+                lis[index].style.backgroundColor = 'gray'
+            }
+        })()
+
+        // foot点击切换
+        let footChilds = document.getElementsByClassName('foot-chil')
+        footChilds[0].onclick = function () {
+            this.style.borderBottom = '3px solid rgb(85, 152, 179)'
+            footChilds[1].style.borderBottom = '3px solid aliceblue'
+        }
+        footChilds[1].onclick = function () {
+            this.style.borderBottom = '3px solid rgb(85, 152, 179)'
+            footChilds[0].style.borderBottom = '3px solid aliceblue'
+        }
+    </script>
+</body>
+
+</html>

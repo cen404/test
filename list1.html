@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>交运集团xq-pt</title>
+    <link rel="stylesheet" href="./css/list1.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="alert">
+            <div class="title">正在拼团</div>
+            <div class="user-1">
+                    <div class="userHead"></div>
+                    <div class="userName">孔青</div>
+                    <div class="block-1">
+                        <div class="cha">还差<a class="a">3</a>人拼成</div>
+                        <div class="time">剩余2:30:40</div>
+                    </div>
+                    <div class="click"><a class="click-btn" href="javascript:;">去拼团</a></div>
+                </div>
+                <div class="user-1">
+                    <div class="userHead"></div>
+                    <div class="userName">晓敏</div>
+                    <div class="block-1">
+                        <div class="cha">还差<a class="a">2</a>人拼成</div>
+                        <div class="time">剩余1:29:12</div>
+                    </div>
+                    <div class="click"><a class="click-btn" href="javascript:;">去拼团</a></div>
+                </div>
+                <div class="user-1">
+                    <div class="userHead"></div>
+                    <div class="userName">张山</div>
+                    <div class="block-1">
+                        <div class="cha">还差<a class="a">1</a>人拼成</div>
+                        <div class="time">剩余5:32:55</div>
+                    </div>
+                    <div class="click"><a class="click-btn" href="javascript:;">去拼团</a></div>
+                </div>
+                <div class="qx">取消</div>
+        </div>
+        <div class="xq">
+            <div class="xq-img"><img src="./images/3.png" alt="xq-img"></div>
+            <div class="xq-txt">
+                <div class="xq-txt-title">畅游长江三峡 大美三峡华夏神女号游轮国内豪华邮轮旅游</div>
+                <div class="xq-txt-v">
+                    ·多地出发动车往返三峡航线上线<br>
+                    ·游轮价格可能会随着船方价格调整而波动，降价不退差价，涨价也不加价<br>
+                    ·华夏神女一号: 每周四发班; 华夏神女二号; 每周日发班<br>
+                </div>
+                <div class="xq-txt-price">
+                    ￥1,599
+                    <a class="less" href="javascript:;">/人</a>
+                    <a class="less-br" href="javascript:;">￥1700</a>
+                </div>
+            </div>
+        </div>
+        <div class="pt">
+            <div class="user">
+                <div class="userHead"></div>
+                <div class="userName">孔青</div>
+                <div class="block">
+                    <div class="cha">还差<a class="a">3</a>人拼成</div>
+                    <div class="time">剩余2:30:40</div>
+                </div>
+                <div class="click"><a class="click-btn" href="javascript:;">去拼团</a></div>
+            </div>
+            <div class="user">
+                <div class="userHead"></div>
+                <div class="userName">晓敏</div>
+                <div class="block">
+                    <div class="cha">还差<a class="a">2</a>人拼成</div>
+                    <div class="time">剩余1:29:12</div>
+                </div>
+                <div class="click"><a class="click-btn" href="javascript:;">去拼团</a></div>
+            </div>
+            <div class="user">
+                <div class="userHead"></div>
+                <div class="userName">张山</div>
+                <div class="block">
+                    <div class="cha">还差<a class="a">1</a>人拼成</div>
+                    <div class="time">剩余5:32:55</div>
+                </div>
+                <div class="click"><a class="click-btn" href="javascript:;">去拼团</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+        for (let i = 0; i < $('.click-btn').length; i++) {
+            $('.click-btn')[i].onclick = function () {
+                $('.alert').css('display', 'block')
+            }
+        }
+        $('.qx')[0].onclick = function () {
+            $('.alert').css('display', 'none')
+        }
+    </script>
+</body>
+
+</html>
